@@ -1,0 +1,453 @@
+@import 'fn.less';
+
+body {
+  padding-top: 54px;
+}
+
+// 清除浮动
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.gray {
+  color: @textColorLight;
+}
+
+// disabled select
+.user-select-none {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all （移动端不需要） */
+  -ms-user-select: none;
+  /* IE 10+ */
+}
+
+// 禁止选中
+img {
+  -webkit-touch-callout: none;
+}
+
+// 1px class
+.bd-1px-b {
+  &:after {
+    .setBottomLine();
+  }
+}
+
+.bd-1px-tb {
+  &:before {
+    .setTopLine();
+  }
+
+  &:after {
+    .setBottomLine();
+  }
+}
+
+.bd-1px-l {
+  &:before {
+    .setLeftLine();
+  }
+}
+
+.bd-1px-r {
+  &:after {
+    .setRightLine();
+  }
+}
+
+// 两栏网格
+.gjc-row {
+  margin: -5px;
+  .mix-clearfix();
+
+  .gjc-col {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+}
+
+
+// table
+.gjc-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.gjc-table th {
+  vertical-align: bottom;
+  text-align: center;
+  border: solid 0.5px #ddd;
+  padding: 8px;
+}
+
+.gjc-table td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: top;
+  border: solid 0.5px #ddd;
+
+}
+
+.jumpbtn {
+  padding: 12px 60px;
+  border-radius: 27px;
+  border: 1PX solid @colorPrimary;
+  color: @colorPrimary;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+a:active {
+  color: @colorPrimary;
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  border-color: @colorPrimary;
+  color: @colorPrimary;
+}
+
+.common {
+  &__btnbox {
+    display: flex;
+    margin: 30px 0;
+    justify-content: center;
+
+    &--item {
+      padding: 8px 10px 8px 10px;
+      border: 1PX solid @borderColor;
+      margin: 0 10px;
+      border-radius: 19px;
+
+    }
+
+
+  }
+
+  &__item {
+
+    margin-bottom: 30px;
+
+    &--title {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    &--desc {
+      text-align: left;
+      font-size: 12px;
+      margin-top: 10px;
+      line-height: 1.2;
+    }
+  }
+}
+
+// swiper
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.maintitlebox {
+  text-align: center;
+
+  .maintitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .maindesc {
+    margin-top: 10px;
+    color: @textColorLight;
+    line-height: 1.4;
+  }
+}
+
+.tc {
+  text-align: center;
+}
+
+.pd10 {
+  padding-left: 10px;
+}
+
+.hwidth {
+  width: 50%;
+}
+
+table {
+  width: 100%;
+}
+
+thead>tr>th,
+tbody>tr>th,
+tfoot>tr>th,
+thead>tr>td,
+tbody>tr>td,
+tfoot>tr>td {
+  border: 1px solid #ddd;
+}
+
+.table-bordered>thead:first-child>tr:first-child>th {
+  border-top: 1px solid #ddd;
+}
+
+thead tr th,
+tbody tr td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+tbody tr td {
+  height: 50px;
+  background: #fff;
+}
+
+.block {
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+.showmore {
+  position: relative;
+  width: 100%;
+  bottom: 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, #ffffff 100%);
+  padding-top: 30px;
+  margin: 10px 0;
+  text-align: center;
+
+  .arrow {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: relative;
+    top: -3px;
+    left: 8px;
+  }
+}
+
+.friends {
+  padding-bottom: 40px !important;
+  height: 340px;
+  overflow: hidden;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &--item {
+      width: 50%;
+      margin-top: 24px;
+      text-align: center;
+
+      .item__desc {
+        text-align: center;
+        line-height: 1.6;
+      }
+    }
+
+    &--showmore {
+      position: relative;
+      width: 100%;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, #ffffff 100%);
+      padding-top: 30px;
+      margin: 10px 0;
+      text-align: center;
+
+      .arrow {
+        border: solid black;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        position: relative;
+        top: -3px;
+        left: 8px;
+      }
+    }
+  }
+
+}
+
+.edition {
+  padding: 15px;
+
+  &__btnbox {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+
+    &--item {
+      width: 20%;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      border-radius: 19px;
+      align-items: center;
+      border: 1PX solid @borderColor;
+    }
+  }
+
+  &__tablebox {
+    &--top {
+      .top {
+        &__btn {
+          width: 100%;
+          padding: 15px 16px;
+          background: @colorPrimary;
+          color: #ffffff;
+          border-radius: 4px 4px 0 0;
+          font-size: 18px;
+          text-align: center;
+        }
+
+        &__desc {
+          width: 195px;
+          margin: 0 auto;
+          line-height: 1.6;
+          font-size: 16px;
+          text-align: center;
+          margin-top: 20px;
+          color: @textColorLighter;
+        }
+
+        &__money {
+          font-size: 16px;
+          text-align: center;
+          line-height: 1.6;
+
+          &--symbol {
+            font-size: 12px;
+            color: @colorPrimary;
+          }
+
+          &--num {
+            font-size: 30px;
+            color: @colorPrimary;
+          }
+
+          &--year {}
+        }
+
+        &__buybtn {
+          margin-top: 20px;
+          margin-bottom: 30px;
+          text-align: center;
+
+          .btn-m {
+            padding: 12px 90px;
+            background: @colorPrimary;
+            color: #ffffff;
+          }
+        }
+
+
+      }
+
+    }
+
+    &--bottom {
+      height: 200px;
+      overflow: hidden;
+    }
+
+
+
+  }
+
+
+
+}

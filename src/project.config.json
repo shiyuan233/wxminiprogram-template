@@ -1,0 +1,69 @@
+{
+  "description": "gulp自动化微信小程序模板",
+  "miniprogramRoot": "/",
+  "packNpmManually": true,
+  "packNpmRelationList": [
+    {
+      "packageJsonPath": "/package.json",
+      "miniprogramNpmDistDir": "/src/"
+    }
+  ],
+  "packOptions": {
+    "ignore": [
+      {
+        "value": "images",
+        "type": "folder"
+      }
+    ],
+    "include": []
+  },
+  "setting": {
+    "bundle": false,
+    "userConfirmedBundleSwitch": false,
+    "urlCheck": true,
+    "scopeDataCheck": false,
+    "coverView": true,
+    "es6": true,
+    "postcss": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "autoAudits": false,
+    "newFeature": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "useIsolateContext": true,
+    "nodeModules": false,
+    "enhance": true,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "showShadowRootInWxmlPanel": true,
+    "enableEngineNative": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "showES6CompileOption": false,
+    "minifyWXML": true,
+    "useStaticServer": true,
+    "checkInvalidKey": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.19.4",
+  "appid": "wxd8fd88c84ecaa1f5",
+  "projectname": "miniprogram-92",
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "srcMiniprogramRoot": "dist/"
+}

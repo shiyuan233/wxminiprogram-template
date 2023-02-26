@@ -1,0 +1,10 @@
+<view class="login">
+  天鸿宝地登录
+  <van-button
+    type="primary"
+    open-type="getPhoneNumber"
+    bindgetphonenumber="getPhoneNumber"
+  >微信授权手机号登录
+  </van-button>
+</view>
+
